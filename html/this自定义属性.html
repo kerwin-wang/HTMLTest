@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this自定义属性</title>
+
+    <style>
+        li{width: 74px;height:64px;background: url(../img/IDEAUp.jpg);float: left;margin: 10px;list-style: none;}
+    </style>
+
+    <script>
+        onload = function () {
+           var wLi = document.getElementsByTagName("li");
+           for (var i = 0; i < wLi.length; i++) {
+               wLi[i].onOff = true;
+               wLi[i].onclick = function () {
+                   if (this.onOff) {
+                   this.style.background = "url(../img/IDEADown.jpg)";
+                   this.onOff = false;
+                   }else{
+                       this.style.background = "url(../img/IDEAUp.jpg)";
+                       this.onOff = true;
+                   }
+               }
+           }
+        }
+    </script>
+
+</head>
+
+<body>
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</body>
+
+</html>

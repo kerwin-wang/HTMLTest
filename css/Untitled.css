@@ -1,0 +1,26 @@
+#box{
+    border: 1px solid red;
+    width: 800px;
+    height: 200px;
+    background-color: aquamarine;
+    text-align: center;
+    color:orangered;
+    margin: 30px auto;
+}
+#login{
+    width: 80px;
+    height: 40px;
+    cursor: pointer;
+    opacity: initial;
+    background-color: plum;
+    border-radius: 40px;
+    font-size: 16px;
+    font-weight: normal;
+    font-family: 仿宋体;
+}
+
+#login:hover{
+    background-color:sandybrown;
+    font-weight: bold;
+    color: red;
+}

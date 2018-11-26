@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this自定义属性</title>
+
+    <style>
+        
+    </style>
+
+    <script>
+        onload = function () {
+            var wInput = document.getElementsByTagName("input");
+            var wP = document.getElementsByTagName("p");
+            var name = ['张三','李四','王五'];
+            for (var i = 0; i < wInput.length; i++) {
+                wInput[i].index = i;
+                wInput[i].onclick = function () {
+                    wP[this.index].innerHTML = name[this.index];
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="button" value="bto1">
+    <input type="button" value="bto2">
+    <input type="button" value="bto3">
+    <p>a</p>
+    <p>b</p>
+    <p>c</p>
+</body>
+
+</html>

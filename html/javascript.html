@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>javascript</title>
+
+    <style>
+        .div{
+            width: 100px;
+            height: 100px;
+            background-color: #e3e;
+        }
+    </style>
+
+    <script type="text/javascript">
+
+        window.onload = function (){
+            
+            document.getElementById("button").onmouseover = function () {
+                document.getElementsByClassName("div")[0].style.backgroundColor = "yellow";
+            }
+
+            document.getElementById("button").onclick = function () {
+                document.getElementById("div1").style.display = "none";
+            }
+
+            document.getElementById("display").onclick = function () {
+                document.getElementById("div2").style.display = "block";
+            }
+
+            document.getElementById("hide").onclick = function () {
+                document.getElementById("div2").style.display = "none";
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <input id="button" type="button" value="换色">
+    <input id="display" type="button" value="显示" >
+    <input id="hide" type="button" value="隐藏" >
+    <div class="div" id="div"></div>
+    <div class="div" id="div1"></div>
+    <div id="div2" class="div"></div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>this自定义属性</title>
+
+    <style>
+        input[type="button"] {
+            width: 50px;
+            height: 50px;
+            border: 1px solid #f1f1f1;
+            margin: 10px;
+            float: left;
+            font-size: 30px;
+        }
+    </style>
+
+    <script>
+        onload = function () {
+            var wButton = document.getElementsByTagName("input");
+            var arr = ['A', 'B', 'C', 'D'];
+            for (var i = 0; i < wButton.length; i++) {
+                wButton[i].num = 0;
+                wButton[i].onclick = function () {
+                    this.value = arr[this.num];
+                    this.num++;
+                    if (this.num > 3) {
+                        this.num = 0;
+                    }
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <input type="button" value="0">
+    <input type="button" value="0">
+    <input type="button" value="0">
+</body>
+
+</html>

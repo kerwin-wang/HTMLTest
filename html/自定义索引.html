@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="shortcut icon" href="../img/favicon.ico" type="image/x-icon">
+    <title>this自定义属性</title>
+
+    <style>
+        p,span,ul{margin: 0;padding: 0;}
+        li{list-style: none}
+        .box{width: 400px;height:500px;position: relative;margin: 0px auto;}
+        .box img{width: 400px;height: 500px;}
+        .box ul{width: 50px;position: absolute;top: 0px;right: -70px;}
+        .box li{width:50px;height: 50px;margin-bottom: 4px;filter: alpha(opacity(40));opacity: 0.4;}
+        .box li:hover{filter: alpha(opacity(80));opacity: 0.8}
+        .box .opacity{filter: alpha(opacity(100));opacity: 1;}
+        .box li img{width: 50px;height: 50px;border-radius: 10px;}
+        .box span{bottom: 0px;}
+        .box p{top:0px;}
+        .box span,.box p{width: 400px;font-size: 30px;height: 30px;line-height: 30px;position: absolute;left: 0px;text-align: center;background-color: #f1f1f1;opacity: 0.6;}
+    </style>
+
+    <script>
+        onload = function () {
+            var wLis = document.getElementsByTagName("li");
+            var wImg = document.getElementsByTagName("img");
+            var wImgUrl = ['../img/1.jpg','../img/2.jpg','../img/3.jpg','../img/4.jpg','../img/5.jpg','../img/6.jpg']
+            var wImgName = ['科比','麦田美女','雪花女神龙','美眸','阳光普照','万里星空']
+            var wUl = document.getElementsByTagName("ul");
+            var wSpan = document.getElementsByTagName("span");
+            var wP = document.getElementsByTagName("p");
+            var wLi = "";
+            for (let i = 0; i < wImgUrl.length; i++) {
+                wLi +="<li><img src = '"+wImgUrl[i]+"'></li>";
+            }
+
+            function change(params) {
+                wImg[0].src = wImgUrl[params];
+                wP[0].innerHTML = 1 + params + '/' + wImgUrl.length;
+                wSpan[0].innerHTML = wImgName[params];
+            }
+
+            change(0);
+
+            wUl[0].innerHTML += wLi;
+            for (let i = 0; i < wImgUrl.length; i++) {
+                wLis[i].onclick = function () {
+                    for (let j = 0; j < wImgUrl.length; j++) {
+                        wLis[j].className = '';
+                    }
+                    wLis[i].className = 'opacity';
+                    change(i);
+                }
+            }
+        }
+    </script>
+
+</head>
+
+<body>
+    <div class="box">
+        <p></p>
+        <span></span>
+        <img src="" alt="...">
+        <ul>
+        </ul>
+    </div>
+</body>
+
+</html>

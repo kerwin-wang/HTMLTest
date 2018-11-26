@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>登录页面</title>
+
+    <style>
+
+        table{
+            width: 60%;
+            height: 200px;
+            border-collapse: collapse;
+        }
+
+        tr,th,td{
+            border:1px solid #99b0da;
+        }
+
+        td{
+            text-align: center;
+        }
+        
+        tr:nth-child(odd){
+            background-color: #EDF4DA;
+        }
+
+        th{
+            height: 20%;
+            border-color: 2px;
+            background-color: #D9E5FB;
+        }
+
+        .tr_1{
+            background-color: aquamarine;
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <table class="table">
+        <tr class="tr_1">
+            <th colspan="2">日期</th>
+            <th colspan="2">天气现象</th>
+            <th>气温</th>
+            <th>风向</th>
+            <th>风力</th>
+        </tr>
+        <tr class="tr_2">
+            <td rowspan="2">22日星期五</td>
+            <td>白天</td>
+            <td><img src="../img/sun.png" alt="晴天"></td>
+            <td>晴间多云</td>
+            <td style="color: #D1671F">高温 5°C</td>
+            <td>无持续风向</td>
+            <td>1级</td>
+        </tr>
+        <tr class="tr_3">
+            <td>夜间</td>
+            <td><img src="../img/cloud.png" alt="多云"></td>
+            <td>多云</td>
+            <td style="color: #1C1E56">低温 -4°C</td>
+            <td>无持续风向</td>
+            <td>2级</td>
+        </tr>
+        <tr class="tr_4">
+            <td rowspan="2" style="color: red">23日星期六</td>
+            <td>白天</td>
+            <td><img src="../img/sun.png" alt="晴天"></td>
+            <td>晴</td>
+            <td style="color: #D1671F">高温 7°C</td>
+            <td>无持续风向</td>
+            <td>1级</td>
+        </tr>
+        <tr class="tr_5">
+            <td>夜间</td>
+            <td><img src="../img/moon.png" alt="晴天"></td>
+            <td>晴</td>
+            <td style="color: #1C1E56">低温 -5°C</td>
+            <td>无持续风向</td>
+            <td>1级</td>
+        </tr>
+    </table>
+</body>
+
+</html>
